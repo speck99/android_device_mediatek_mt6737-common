@@ -49,8 +49,8 @@ PRODUCT_PACKAGES += \
     libion
 
 # Doze
-PRODUCT_PACKAGES += \
-    Doze
+#PRODUCT_PACKAGES += \
+#    Doze
 
 # Misc
 PRODUCT_PACKAGES += \
@@ -178,7 +178,6 @@ PRODUCT_TAGS += dalvik.gc.type-precise
 
 # Dexpreopt
 WITH_DEXPREOPT := true
-DONT_DEXPREOPT_PREBUILTS := true
 
 # Disable memcpy opt (for audio libraries)
 TARGET_CPU_MEMCPY_OPT_DISABLE := true
