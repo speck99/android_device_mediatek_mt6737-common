@@ -178,6 +178,7 @@ PRODUCT_TAGS += dalvik.gc.type-precise
 
 # Dexpreopt
 WITH_DEXPREOPT := true
+WITH_DEXPREOPT_BOOT_IMG_AND_SYSTEM_SERVER_ONLY := true
 
 # Disable memcpy opt (for audio libraries)
 TARGET_CPU_MEMCPY_OPT_DISABLE := true
