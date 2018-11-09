@@ -50,7 +50,7 @@ LOCAL_SRC_FILES := \
 	lib/SWWatchDog.cpp
 
 LOCAL_C_INCLUDES := \
-	device/mediatek/emt6737-common/libgem/inc \
+	$(LOCAL_PATH)/inc \
 	frameworks/native/libs/nativewindow/include \
 	frameworks/native/libs/nativebase/include \
 	frameworks/native/libs/arect/include \
@@ -98,7 +98,7 @@ LOCAL_SRC_FILES := \
 	lib/GuiExtImpl.cpp
 
 LOCAL_C_INCLUDES := \
-	device/mediatek/mt6737-common/libgem/inc
+	$(LOCAL_PATH)/inc
 
 LOCAL_SHARED_LIBRARIES := \
 	libutils \

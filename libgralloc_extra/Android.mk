@@ -8,8 +8,8 @@ LOCAL_SRC_FILES := \
 #	ge.c
 
 LOCAL_C_INCLUDES := \
-	device/mediatek/mt6737-common/libgralloc_extra/include \
-	device/mediatek/mt6737-common/libgralloc_extra/../include
+	$(LOCAL_PATH)/include \
+	$(LOCAL_PATH)/../include
 
 LOCAL_SHARED_LIBRARIES := \
     libhardware \
@@ -20,7 +20,7 @@ LOCAL_SHARED_LIBRARIES := \
 	libged
 
 LOCAL_EXPORT_C_INCLUDE_DIRS := \
-	device/mediatek/mt6737-common/libgralloc_extra/include \
+	$(LOCAL_PATH)/include \
 
 LOCAL_C_INCLUDES += \
 	system/core/libion/include \
