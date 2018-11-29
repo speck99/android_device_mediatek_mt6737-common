@@ -209,7 +209,7 @@ BOARD_RIL_CLASS := ../../../$(COMMON_PATH)/ril
 BOARD_SECCOMP_POLICY := $(COMMON_PATH)/seccomp
 
 # SELinux
-BOARD_SEPOLICY_DIRS := $(COMMON_PATH)/sepolicy
+#BOARD_SEPOLICY_DIRS := $(COMMON_PATH)/sepolicy
 
 # TEST AREA #######################
 # Bluetooth
@@ -271,10 +271,7 @@ PRODUCT_PACKAGES += \
     android.hardware.graphics.allocator@2.0-service \
     android.hardware.graphics.composer@2.1-impl \
     android.hardware.graphics.mapper@2.0-impl \
-    android.hardware.memtrack@1.0-impl \
-    libgralloc_extra \
-    libgui_ext \
-    libui_ext
+    android.hardware.memtrack@1.0-impl 
 
 # HIDL
 PRODUCT_COPY_FILES += \
@@ -283,7 +280,7 @@ PRODUCT_COPY_FILES += \
 # SW Gatekeeper
 BOARD_USE_SOFT_GATEKEEPER := true
 TARGET_LDPRELOAD += mtk_symbols.so
-DEVICE_MANIFEST_FILE := device/moto/e4/hidl/manifest.xml
+DEVICE_MANIFEST_FILE := device/mediatek/mt6737-common/hidl/manifest.xml
 # SensorHAL
 #TARGET_SENSORS_DEVICE_API_VERSION := SENSORS_DEVICE_API_VERSION_1_1
 ###################################
