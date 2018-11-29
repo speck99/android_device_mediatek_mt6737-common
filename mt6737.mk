@@ -246,7 +246,7 @@ PRODUCT_PACKAGES += \
     android.hardware.light@2.0-impl \
     android.hardware.light@2.0-service \
     android.hardware.sensors@1.0-impl \
-    android.hardware.sensors@1.0-service \
+    android.hardware.sensors@1.0-service
 
 # GPS HAL
 PRODUCT_PACKAGES += \
@@ -282,7 +282,7 @@ BOARD_USE_SOFT_GATEKEEPER := true
 TARGET_LDPRELOAD += mtk_symbols.so
 DEVICE_MANIFEST_FILE := device/mediatek/mt6737-common/hidl/manifest.xml
 # SensorHAL
-TARGET_SENSORS_DEVICE_API_VERSION := SENSORS_DEVICE_API_VERSION_1_1
+#TARGET_SENSORS_DEVICE_API_VERSION := SENSORS_DEVICE_API_VERSION_1_1
 ###################################
 
 # Wifi
