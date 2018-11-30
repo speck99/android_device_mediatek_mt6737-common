@@ -49,7 +49,7 @@ LOCAL_SRC_FILES := \
 	lib/SWWatchDog.cpp
 
 LOCAL_C_INCLUDES := \
-	device/motorola/nicklaus/libgem/inc \
+	device/mediatek/mt6737-common/libgem/inc \
 	frameworks/native/libs/nativewindow/include \
 	frameworks/native/libs/nativebase/include \
 	frameworks/native/libs/arect/include \
