@@ -97,7 +97,7 @@ LOCAL_SRC_FILES := \
 	lib/GuiExtImpl.cpp
 
 LOCAL_C_INCLUDES := \
-	device/motorola/nicklaus/libgem/inc
+	device/mediatek/mt6737-common/libgem/inc
 
 LOCAL_SHARED_LIBRARIES := \
 	libutils \
