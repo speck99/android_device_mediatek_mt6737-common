@@ -78,13 +78,13 @@ PRODUCT_PACKAGES += \
 # Wifi
 PRODUCT_PACKAGES += \
     android.hardware.wifi@1.0-service \
-    libwpa_client \
+    dhcpcd.conf \
     hostapd \
-    wpa_supplicant \
-    wpa_supplicant.conf \
-    libwifi-hal-mt66xx \
+    lib_driver_cmd_mt66xx \
+    libwpa_client \
     wificond \
-    wifilogd 
+    wpa_supplicant \
+    wpa_supplicant.conf
 
 #### Copy files ####
 
