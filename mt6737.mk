@@ -212,7 +212,7 @@ BOARD_RIL_CLASS := ../../../$(COMMON_PATH)/ril
 BOARD_SECCOMP_POLICY := $(COMMON_PATH)/seccomp
 
 # SELinux
-#BOARD_SEPOLICY_DIRS := $(COMMON_PATH)/sepolicy
+BOARD_SEPOLICY_DIRS := $(COMMON_PATH)/sepolicy
 
 # TEST AREA #######################
 # Bluetooth
