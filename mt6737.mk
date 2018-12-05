@@ -78,13 +78,12 @@ PRODUCT_PACKAGES += \
 # Wifi
 PRODUCT_PACKAGES += \
     android.hardware.wifi@1.0-service \
-    dhcpcd.conf \
-    hostapd \
-    lib_driver_cmd_mt66xx \
     libwpa_client \
-    wificond \
+    hostapd \
+    dhcpcd.conf \
     wpa_supplicant \
-    wpa_supplicant.conf
+    wpa_supplicant.conf \
+    wificond
 
 #### Copy files ####
 
@@ -212,7 +211,7 @@ BOARD_RIL_CLASS := ../../../$(COMMON_PATH)/ril
 BOARD_SECCOMP_POLICY := $(COMMON_PATH)/seccomp
 
 # SELinux
-BOARD_SEPOLICY_DIRS := $(COMMON_PATH)/sepolicy
+#BOARD_SEPOLICY_DIRS := $(COMMON_PATH)/sepolicy
 
 # TEST AREA #######################
 # Bluetooth
