@@ -49,8 +49,8 @@ PRODUCT_PACKAGES += \
     libion
 
 # Doze
-#PRODUCT_PACKAGES += \
-#    Doze
+PRODUCT_PACKAGES += \
+    Doze
 
 # Misc
 PRODUCT_PACKAGES += \
