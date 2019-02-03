@@ -27,6 +27,9 @@ DEVICE_PACKAGE_OVERLAYS += $(COMMON_PATH)/overlay
 
 # Audio
 PRODUCT_PACKAGES += \
+    android.hardware.audio@2.0-impl \
+    android.hardware.audio.effect@2.0-impl \
+    android.hardware.audio@2.0-service \
     audio.r_submix.default \
     audio.a2dp.default \
     audio.usb.default \
@@ -48,9 +51,26 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libion
 
-# Doze
+# Graphics
 PRODUCT_PACKAGES += \
-    Doze
+    android.hardware.graphics.allocator@2.0-impl \
+    android.hardware.graphics.allocator@2.0-service \
+    android.hardware.graphics.composer@2.1-impl \
+    android.hardware.memtrack@1.0-impl \
+    android.hardware.graphics.mapper@2.0-impl \
+    libgralloc_extra
+
+# SW Gatekeeper
+BOARD_USE_SOFT_GATEKEEPER := true
+
+# RenderScript
+PRODUCT_PACKAGES += \
+    libRSDriver_mtk \
+    android.hardware.renderscript@1.0-impl
+
+# Doze
+#PRODUCT_PACKAGES += \
+#    Doze
 
 # Misc
 PRODUCT_PACKAGES += \
@@ -61,6 +81,41 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
    Snap
 
+# Bluetooth
+PRODUCT_PACKAGES += \
+    android.hardware.bluetooth@1.0-impl \
+    android.hardware.bluetooth@1.0-service
+
+# Vibrator
+PRODUCT_PACKAGES += \
+    android.hardware.vibrator@1.0-impl \
+    android.hardware.vibrator@1.0-service
+
+# Keymaster HAL
+PRODUCT_PACKAGES += \
+    android.hardware.keymaster@3.0-impl
+
+# Sensors HAL
+PRODUCT_PACKAGES += \
+    android.hardware.light@2.0-impl \
+    android.hardware.light@2.0-service \
+    android.hardware.sensors@1.0-impl \
+    android.hardware.sensors@1.0-service
+
+# SensorHAL
+TARGET_SENSORS_DEVICE_API_VERSION := SENSORS_DEVICE_API_VERSION_1_1
+
+# Power HAL
+PRODUCT_PACKAGES += \
+    android.hardware.power@1.0-impl
+
+# Health HAL
+PRODUCT_PACKAGES += \
+    android.hardware.health@1.0-impl \
+    android.hardware.health@1.0-service
+
+
+
 # Symbols
 PRODUCT_PACKAGES += \
     libshim_ui \
@@ -70,10 +125,14 @@ PRODUCT_PACKAGES += \
 
 # USB
 PRODUCT_PACKAGES += \
+    android.hardware.usb@1.0-service \
     com.android.future.usb.accessory
 
 # Wifi
 PRODUCT_PACKAGES += \
+    android.hardware.wifi@1.0-service \
+    wificond \
+    wifilogd \
     libwpa_client \
     hostapd \
     wpa_supplicant \
@@ -177,7 +236,7 @@ BOARD_HARDWARE_CLASS := $(COMMON_PATH)/cmhw
 PRODUCT_TAGS += dalvik.gc.type-precise
 
 # Dexpreopt
-WITH_DEXPREOPT := true
+#WITH_DEXPREOPT := true
 
 # Disable memcpy opt (for audio libraries)
 TARGET_CPU_MEMCPY_OPT_DISABLE := true
@@ -204,7 +263,10 @@ BOARD_RIL_CLASS := ../../../$(COMMON_PATH)/ril
 BOARD_SECCOMP_POLICY := $(COMMON_PATH)/seccomp
 
 # SELinux
-BOARD_SEPOLICY_DIRS := $(COMMON_PATH)/sepolicy
+#BOARD_SEPOLICY_DIRS := $(COMMON_PATH)/sepolicy
+
+# HIDL
+DEVICE_MANIFEST_FILE := $(LOCAL_PATH)/manifest.xml
 
 # Wifi
 WPA_SUPPLICANT_VERSION := VER_0_8_X
