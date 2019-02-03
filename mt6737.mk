@@ -109,11 +109,6 @@ TARGET_SENSORS_DEVICE_API_VERSION := SENSORS_DEVICE_API_VERSION_1_1
 PRODUCT_PACKAGES += \
     android.hardware.power@1.0-impl
 
-# Health HAL
-PRODUCT_PACKAGES += \
-    android.hardware.health@1.0-impl \
-    android.hardware.health@1.0-service
-
 # Symbols
 PRODUCT_PACKAGES += \
     libshim_ui \
