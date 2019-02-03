@@ -202,7 +202,7 @@ PRODUCT_COPY_FILES += \
 #### Props ####
 
 # Android Debugging
-ADDITIONAL_DEFAULT_PROPERTIES += \
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     ro.secure=0 \
     ro.adb.secure=0
 

@@ -8,5 +8,5 @@ patch -p1 < ../../device/mediatek/mt6737-common/patches/frameworks_base_core_whi
 cd ../..
 cd hardware/interfaces
 git reset --hard && git clean -f -d
-patch -p1 < ../../edvice/mediatek/mt6737-common/patches/0002-hardware_interfaces.patch
+patch -p1 < ../../device/mediatek/mt6737-common/patches/0002-hardware_interfaces.patch
 cd ../..
