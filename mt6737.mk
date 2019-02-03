@@ -58,7 +58,7 @@ PRODUCT_PACKAGES += \
     android.hardware.graphics.composer@2.1-impl \
     android.hardware.memtrack@1.0-impl \
     android.hardware.graphics.mapper@2.0-impl \
-    libgralloc_extra
+    hwcomposer.mt6735
 
 # SW Gatekeeper
 BOARD_USE_SOFT_GATEKEEPER := true
@@ -113,8 +113,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.health@1.0-impl \
     android.hardware.health@1.0-service
-
-
 
 # Symbols
 PRODUCT_PACKAGES += \
